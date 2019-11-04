@@ -1,0 +1,383 @@
+/*
+ *  ___ = needs done
+ */
+
+package the_empress;
+
+import java.util.Scanner;
+
+public class T_E {
+
+	 Scanner input = new Scanner(System.in);
+    
+
+	public T_E() {
+		print("Welcome to The Keys of Kavvian \n" +
+	          "A choose your own adventure game \n" +
+			  "\n" );
+		//change to ascii art for this instead of just text ___
+			  
+			  print("~ Entry Level ~ " +
+	          "\n" +
+		      "You are standing on a familar strret you've walked down this street a thousand times before. \n" + 
+			  "You know the layout of the building and side streets like the back of your hand.\n" +
+		      "You begin walking down the street. \n" + 
+			  "You suddenly stop.\n" +
+		      "To your right the building that has always been empty is now what appears to be a restruant. \n" +
+			  "The windows have been tinted black and a decorative sign above the french double door reads: \n");
+		
+		print("???");
+		//insert ascci art here for the restaurant sign ___
+		
+		choice1(input);
+	}
+	
+	
+	public void choice1(Scanner input) {
+		String choice1_input;
+		
+		print("      Are you going to? \n" +
+		      "	a) continue down street \n\t\t" +
+			  "or \n\t" +
+			  "b) enter restruant \n" +
+			  "" );
+		
+		choice1_input = input.next();
+		switch (choice1_input) {
+			
+			default: 
+			print("Invalid Entry");
+			
+			choice1(input);
+			
+			break;
+		
+			case "a":
+				print("You continue down the street and go on with your life \n");
+				
+				print("??? \n");
+				//insert Game Over (100, entry) Ascii ___
+				break;
+				
+				case "b":
+				print("You walk into the restruant. \n" +
+			          "You are standing in what appears to be a waiting area. \n" +
+					  "There are couches on either wall and a counter sits centered between the last couches on either wall. \n" +
+			          "You can see back into part of the restruant. \n" +
+					  "\n" +
+					  "There is a sign near the counter which reads: \n");
+				
+				print("??? ");
+				//insert Sign (by counter) Ascii ___
+				
+				print("A waitor approaches you and says, \"Welcome, would you like a table?\" \n");
+				
+				choice2(input);
+				
+				break;
+		
+		
+			}
+		
+		}
+	
+	public void choice2(Scanner input) {
+		
+		String choice2_input = input.next();
+		
+		if (choice2_input.equalsIgnoreCase("Yes")) { 
+			
+			print("The waitor replies" +
+			      "\"Excelent Choice\" \n" +
+				  "and leads you futrhter into the restruant. \n" +
+			      "You notice two men in suits standing behind the edge of the wall. \n" +
+				  "You are lead to a small table neart one of the blacked out windows. \n" +
+			      "The waitor says, \n" +
+				  "\"The menu is on the table. I will be back in a few minutes to take your order. \n" +
+			      "You look down at the Menu"
+				  );
+			
+			print("???");
+			//insert Menu Art
+			
+			choice3(input);
+			
+		}
+		
+		else if (choice2_input.equalsIgnoreCase("No")) {
+			print("The airtor frowns and says, \n" +
+		          " \"That's unfortunate\" \n" +
+				  "Two men in suits walk into the waiting areas and brab either of your arms. \n" +
+				   "The waitor walks over to the wall and pointsat a picture of a group of people sitting around a fire. \n" +
+				   "\"This will do\" \n" +
+				   "You struggle as the waitro putr a fingure on your forhead and laps the empty chair in the photo. \n" +
+				   "A bright light blinds you for a moment and pain flashes through your body. \n" +
+				   "The next thing you know you are sitting in the empty chair around the fire. \n" +
+				   "You are now forced to sprend enternity watching the waiting area. \n" +
+				   "You and the other people who you are trapped with never really figure out what's goint on \n"
+					);
+			
+			print("???");
+			//insert Game Over (200, Entry) Art ___
+		}
+		
+		else {
+			print("Invalid Entry");
+			
+			choice2(input);
+		}
+		
+	}
+	
+	public void choice3(Scanner input) {
+		
+		String choice3_input = input.next();
+		
+		switch (choice3_input) {
+		
+			default: 
+				print("Invalid Entry");
+				
+				choice3(input);
+				
+				break;
+				
+			case "a":
+				print("\"Ahh, the safe option. \n" +
+			          "I'll get that out to your as soon as possible\" \n" +
+					  "The wairtor brought out your meal about 10 minutes later. \n" +
+			          "You eat your emal in peace, pay your bill, and then you leave. \n" +
+					  "You go on with your life." +
+			          "When you try to look for the restruant again but you can't find it." 
+			          );
+				
+				print("???"); //___ Insert Game Over Ascii Art (200, entry)
+				
+				break;
+				
+			case "b":
+				print("You see a look of pit flash across the waitors face, but it quickly goes away. \n" +
+			          "\"I'll have that out as soon as possible\" \n" +
+					  "The waitor brings you food out 20 minutes later. \n" +
+			          "\"Sorry it took so long. \n" +
+					  "It takes a while to prepare\" \n" +
+			          "You start eating, but about half way through eating you start to feel funny. \n" +
+					  "You look down and see that you are dressed like your waitor. \n" +
+			          "You try to run away, but you are unable to move. \n" +
+					  "A group of waitors walk up to your and one says, \n" +
+			          "\"Welcome to The Empress staff. \n" +
+					  "Your remaining existance will be spent here serving the Kavvain. \n" +
+					  "You then realize why the waitor gave you a look of pity. \n"
+						);
+				
+				print("???"); //Insert Game Over Ascii Art (300, entry)
+				
+				break;
+				
+			case "c": 
+				print("A look of relief spread across your waitors face briefly. \n" +
+			          "\"Nice choice. \n" +
+					  "I will have that out as soon as the chef has that done. \n" +
+			          "A couple minutes later your waitor and another waitro approuch your table. \n" +
+					  "Your waitor says, \n" +
+			          "\"You have been upgraded to our Bronze level. WOuld you like to accept it?\" \n" 
+						);
+				
+				choice4(input);
+				
+				break;
+		}
+	}
+	
+	public void choice4(Scanner input) {
+		String choice_4 = input.next();
+		
+		if (choice_4.contains("n")) {
+			print("The other waitor frowned. \n" +
+		          "\"That's unfortunate.\"" +
+				  "Your waitor grimaches as the other waitor walks over to the wall of trinkets. \n" +
+		          "Which you hadn't had noticed till now. \n" +
+				  "It was full of beautiful ornate statues amind other nicknacks. \n" +
+		          "The waitor pointed at an empty space between what looked like two small pillars. \n" +
+				  "\n" +
+				  "\"This is perfect.\" \n" +
+				  "\n" +
+		          "The waitor walked back over to you and as you try to move your waitor shoots you a look of pity. \n" +
+				  "The other waitor tapped your forhead, put their arm diagonal line, \n" +
+		          "and then brought their hand together juct above your heart. \n" +
+				  "\n" +
+		          "You are blinded by a bright light and a sharp pain radiates through your body. \n" +
+				  "The next thing your know the other waitor picks you up off of the floor and sets you between the two pillars. \n" +
+		          "You realize the you have been turned into one of the orante figures. \n" +
+				  "You are forced to spend eternity watching other customers expirence that restruant, \n" +
+		          "never really understanding what's going on. \n"
+					);
+			
+			print("???"); //Insert Game Over Ascci Art (400, entry)
+		}
+		
+		else if (choice_4.contains("y")) {
+			print("\"Excelent\" the other waitro syays, \"Follow me please. \" \n" +
+		          "Your waitor waves goodbye as the other waitor excortes you up a grand glass staircase you never noticed before. \n " +
+				  "\n" +
+		          "You are now entering the BRONZE LEVEL" +
+				  "\n" +
+		          "\"Welcome to the bronze level\", \n" +
+				  "the other waitor says as you reach the top of the staircase. \n" +
+		          "\n" +
+				  "The waitor gestures to bothe sides of the room which were divided by a wall. \n" +
+		          "The left side was filled with plants and was colored earthy tones. \n" +
+				  "The chairs were plush and the lighting was warm and soft. \n" +
+		          "The right was full of exquisite paintings and sculptures. \n" +
+				  "It was elegent and mysterous. \n" +
+		          "The lighting was moody and the aura of the room was filled with curiosity and danger. \n"
+					);
+			
+			choice5(input);
+			
+		}
+		
+		else {
+			print("Please repeat that.");
+			
+			choice4(input);
+		}
+		
+	}
+	
+	
+    public void choice5(Scanner input) {
+    	
+    	String choice_5 = input.next();
+    	
+    	if (choice_5.contains("right")) {
+    		print("The other waitor smirked and leads you into the right side. \n" +
+    	          "There was an enormous chandelier in the center, but it wasn't finished. \n" +
+    			  "The other waitor guesstures for you to cross onto the carpeted area. \n" +
+    	          "\n" +
+    			  "A bright light blinds you and a sharp pain goes through your body." + 
+    	          "The next thing you know your a crystal dangling fromthe chandelier. \n" +
+    			  "You are forced to watch as the other waitor lures others inot their trap. \n" +
+    	          "You never fully understand what's going on. \n"
+    				);
+    		
+    		print("???"); //Insert Game Over Asccii Art (500, Bronze)
+    		
+    	}
+		
+    	else if (choice_5.contains("left")) {
+    		print("A slight frown slides across the other waitor's face. \n" +
+    	          "\"Right this way then.\" \n" +
+    			  "The waitor says guesturng to the left side. \n" +
+    	          "You are sat in a table next to a giant fern. \n" +
+    			  "The table was a dusty pink color and the chair is a paded arm chair. \n" +
+    	          "A young couple is seeted at the table to your left. \n" +
+    			  "\n" +
+    	          "The other waitor says, \n" +
+    			  "\"I'll be right back with the menu.\", and then promptly leaves." +
+    	          "\n" +
+    			  "As soon as the other waitor leafes the girl leans over towards you and says, \n" +
+    	          "I assume you were upgraded and had to choose a side. \n" +
+    	          "\"This place is very unusual don't you think?\" \n"
+    				);
+    		
+    		choice6(input);
+    	}
+    	
+    	else {
+    		print("I don't understand.");
+    		
+    		choice5(input);
+    	}
+	}
+    
+	
+    public void choice6(Scanner input) {
+		
+	}    
+
+    
+    public void choice7(Scanner input) {
+		
+	}
+	
+    
+    public void choice8(Scanner input) {
+		
+	}
+    
+    
+    public void choice9(Scanner input) {
+		
+	}
+    
+    
+    public void choice10(Scanner input) {
+		
+	}
+    
+    
+    public void choice11(Scanner input) {
+		
+	}
+    
+    
+    public void choice12(Scanner input) {
+		
+	}
+    
+    
+    public void choice13(Scanner input) {
+		
+	}
+    
+    
+    public void choice14(Scanner input) {
+		
+	}
+    
+    
+    public void choice15(Scanner input) {
+		
+	}
+    
+    
+    public void choice16(Scanner input) {
+		
+	}
+    
+    
+    public void choice17(Scanner input) {
+		
+	}
+    
+    
+    public void choice18(Scanner input) {
+		
+	}
+    
+    
+    public void choice19(Scanner input) {
+		
+	}
+    
+    
+    public void choice20(Scanner input) {
+		
+	}
+	
+    
+	public static void print(Object o) 
+	{ 
+		System.out.println(o.toString());
+	}
+	//shortens System.out.println to print - simplifies code
+	
+	public static void main(String[] args) {
+		new T_E();
+		
+		
+
+	}
+
+}
